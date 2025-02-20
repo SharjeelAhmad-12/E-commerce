@@ -19,7 +19,7 @@ const ProductCard = ({ product }) => {
       <div className="mt-4">
         <Button
           text="Add to Cart"
-          className="bg-red-500 hover:bg-red-600 w-full"
+          className="bg-blue-400 hover:bg-blue-800 w-full"
         />
       </div>
     </div>
