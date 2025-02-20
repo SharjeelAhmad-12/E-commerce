@@ -1,8 +1,8 @@
-import React from 'react';
-import './App.css'
-import Navbar from './components/Navbar'
-import HeroSection from './components/HeroSection'
-import Footer from './components/Footer';
+import React from "react";
+import "./App.css";
+import Navbar from "./components/Navbar";
+import HeroSection from "./components/HeroSection";
+import Footer from "./components/Footer";
 
 function App() {
   const products = [
@@ -31,11 +31,11 @@ function App() {
 
   return (
     <>
- <Navbar/>
-  <HeroSection products={products} />
-  <Footer/>
+      <Navbar />
+      <HeroSection products={products} />
+      <Footer />
     </>
-  )
+  );
 }
 
-export default App
+export default App;
