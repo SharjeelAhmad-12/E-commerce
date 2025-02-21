@@ -1,11 +1,12 @@
 import { FiSearch, FiShoppingCart } from "react-icons/fi";
+import { Link } from "react-router-dom";
 import Button from "./Button";
 
 const navLinks = [
-  { name: "Home", href: "#" },
-  { name: "Shop", href: "#" },
-  { name: "About", href: "#" },
-  { name: "Contact", href: "#" },
+  { name: "Home", to: "/home" },
+  { name: "Shop", to: "/shop" },
+  { name: "About", to: "/about" },
+  { name: "Contact", to: "/contact" },
 ];
 
 const Navbar = () => {
@@ -17,7 +18,7 @@ const Navbar = () => {
         <ul className="hidden md:flex space-x-6">
           {navLinks.map((link) => (
             <li key={link.name}>
-              <a href={link.href} className="hover:text-blue-500">{link.name}</a>
+              <Link to={link.to} className="hover:text-blue-500">{link.name}</Link>
             </li>
           ))}
         </ul>

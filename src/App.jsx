@@ -1,38 +1,26 @@
 import React from "react";
 import "./App.css";
 import Navbar from "./components/Navbar";
-import HeroSection from "./components/HeroSection";
 import Footer from "./components/Footer";
+import { Route,Routes } from "react-router-dom";
+import Home from "./pages/Home";
+import About from "./pages/About";
+import Contact from "./pages/Contact";
+import Shop from "./pages/Shop";
 
 function App() {
-  const products = [
-    {
-      id: 1,
-      name: "Black Sweater",
-      price: 29.99,
-      rating: 4.5,
-      image: "/public/product-images/Black-Sweater.webp",
-    },
-    {
-      id: 2,
-      name: "Brown Sweater",
-      price: 39.99,
-      rating: 4.2,
-      image: "/public/product-images/Offwhite-Sweater.webp",
-    },
-    {
-      id: 3,
-      name: "White Sweater",
-      price: 49.99,
-      rating: 4.8,
-      image: "/public/product-images/White-Sweater.webp",
-    },
-  ];
 
   return (
     <>
       <Navbar />
-      <HeroSection products={products} />
+      <Routes>
+        <Route path="/" element={<Home/>} />
+        <Route path="/home" element={<Home/>} />
+        <Route path="/Shop" element={<Shop/>} />
+        <Route path="/about" element={<About/>} />
+        <Route path="/contact" element={<Contact/>} />
+        <Route path="*" element={<Error/>} />
+      </Routes>
       <Footer />
     </>
   );
